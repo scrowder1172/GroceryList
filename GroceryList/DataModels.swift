@@ -10,13 +10,13 @@ import SwiftData
 
 @Model 
 final class Stores {
-    var store: String
+    var storeName: String
     let dateAdded: Date = Date()
     var formattedDateAdded: String {
         dateAdded.formatted(date: .long, time: .standard)
     }
     
-    init(store: String) {
-        self.store = store
+    init(storeName: String) {
+        self.storeName = storeName
     }
 }
