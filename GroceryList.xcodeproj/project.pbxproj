@@ -11,6 +11,7 @@
 		52AABFD62B0D1ADE0018B469 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AABFD52B0D1ADE0018B469 /* ContentView.swift */; };
 		52AABFD82B0D1AE00018B469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AABFD72B0D1AE00018B469 /* Assets.xcassets */; };
 		52AABFDB2B0D1AE00018B469 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AABFDA2B0D1AE00018B469 /* Preview Assets.xcassets */; };
+		52AABFE22B0D1C130018B469 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AABFE12B0D1C130018B469 /* DataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		52AABFD52B0D1ADE0018B469 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52AABFD72B0D1AE00018B469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52AABFDA2B0D1AE00018B469 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52AABFE12B0D1C130018B469 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				52AABFD32B0D1ADE0018B469 /* GroceryListApp.swift */,
 				52AABFD52B0D1ADE0018B469 /* ContentView.swift */,
+				52AABFE12B0D1C130018B469 /* DataModels.swift */,
 				52AABFD72B0D1AE00018B469 /* Assets.xcassets */,
 				52AABFD92B0D1AE00018B469 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AABFE22B0D1C130018B469 /* DataModels.swift in Sources */,
 				52AABFD62B0D1ADE0018B469 /* ContentView.swift in Sources */,
 				52AABFD42B0D1ADE0018B469 /* GroceryListApp.swift in Sources */,
 			);
