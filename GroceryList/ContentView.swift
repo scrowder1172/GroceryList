@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                Text("Store 1")
+                Text("Store 2")
+                Text("Store 3")
+            }
+            .navigationTitle("Grocery Stores")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Add Store", systemImage: "plus") {
+                        // add code later
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+            }
         }
-        .padding()
     }
 }
 
