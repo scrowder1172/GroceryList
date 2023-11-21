@@ -6,20 +6,38 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @Environment(\.modelContext) var modelContext
+    
+    @Query(
+        sort: [
+            SortDescriptor(\Stores.storeName)
+        ]
+    ) var allStores: [Stores]
+    
+    @State private var showingAddStores: Bool = false
+    
     var body: some View {
         NavigationStack {
             List {
-                Text("Store 1")
-                Text("Store 2")
-                Text("Store 3")
+                ForEach(allStores) {store in
+                    NavigationLink(value: store) {
+                        Text(store.storeName)
+                    }
+                }
+                .onDelete(perform: allStoresDelete)
             }
             .navigationTitle("Grocery Stores")
+            .navigationDestination(for: Stores.self) {store in
+                // add later
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add Store", systemImage: "plus") {
-                        // add code later
+                        showingAddStores = true
                     }
                 }
                 
@@ -27,6 +45,16 @@ struct ContentView: View {
                     EditButton()
                 }
             }
+            .sheet(isPresented: $showingAddStores) {
+                AddStoreView()
+            }
+        }
+    }
+    
+    func allStoresDelete(at offsets: IndexSet) {
+        for offset in offsets {
+            let store = allStores[offset]
+            modelContext.delete(store)
         }
     }
 }
